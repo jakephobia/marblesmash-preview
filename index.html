@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%2338bdf8'/%3E%3Ccircle cx='11' cy='11' r='4' fill='%23e0f2fe'/%3E%3C/svg%3E"
+    />
+    <meta
+      name="description"
+      content="Marblesmash: a lightweight 2D marble race with Planck physics and Canvas graphics."
+    />
+    <title>Marblesmash — 2D Marble Race</title>
+    <script type="module" crossorigin src="./assets/index-DTto3dTC.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BSXYSlfx.css">
+  </head>
+  <body>
+    <div id="app" data-mode="edit">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div class="brand-copy">
+            <h1>Marblesmash</h1>
+            <p id="level-name" class="brand-subtitle">Loading track…</p>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <div id="mode-switch" class="mode-switch" role="group" aria-label="Application mode">
+            <button
+              id="mode-edit"
+              class="mode-btn is-active"
+              type="button"
+              aria-pressed="true"
+            >
+              Edit
+            </button>
+            <button
+              id="mode-play"
+              class="mode-btn"
+              type="button"
+              aria-pressed="false"
+            >
+              Play
+            </button>
+            <button
+              id="mode-championship"
+              class="mode-btn"
+              type="button"
+              aria-pressed="false"
+            >
+              Race
+            </button>
+            <button
+              id="mode-survival"
+              class="mode-btn"
+              type="button"
+              aria-pressed="false"
+            >
+              Survival
+            </button>
+          </div>
+          <div id="controls" class="controls" role="toolbar" aria-label="Race controls"></div>
+        </div>
+      </header>
+
+      <main class="stage">
+        <div id="canvas-wrap" class="canvas-wrap">
+          <canvas
+            id="game-canvas"
+            aria-label="Vertical track with numbered marbles falling toward the finish"
+          ></canvas>
+          <div id="status-badge" class="status-badge">Ready</div>
+        </div>
+
+        <aside id="race-panel" class="panel" aria-label="Statistics and leaderboard">
+          <section id="stats" class="stats" aria-label="Race statistics"></section>
+          <section class="leaderboard-wrap">
+            <div class="panel-heading">
+              <h2>Leaderboard</h2>
+              <span id="leaderboard-count" class="muted">0 marbles</span>
+            </div>
+            <ol id="leaderboard" class="leaderboard"></ol>
+          </section>
+        </aside>
+
+        <aside id="editor-panel" class="panel editor-panel" aria-label="Track editor">
+          <div id="editor-toolbar" class="editor-toolbar"></div>
+          <div id="editor-properties" class="editor-properties"></div>
+          <p id="editor-message" class="editor-message" role="status" aria-live="polite"></p>
+          <div id="editor-actions" class="editor-actions"></div>
+        </aside>
+
+        <aside
+          id="campaign-panel"
+          class="panel campaign-panel"
+          aria-label="Campaign"
+          hidden
+        ></aside>
+      </main>
+    </div>
+
+  </body>
+</html>
